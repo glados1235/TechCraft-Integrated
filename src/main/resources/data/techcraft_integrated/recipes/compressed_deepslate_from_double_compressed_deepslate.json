@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "techcraft_integrated:double_compressed_deepslate"
+    }
+  ],
+  "result": {
+    "item": "techcraft_integrated:compressed_deepslate",
+    "count": 9
+  }
+}

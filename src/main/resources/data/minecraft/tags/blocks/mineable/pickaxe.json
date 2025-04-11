@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "techcraft_integrated:compressed_cobblestone",
+    "techcraft_integrated:double_compressed_cobblestone",
+    "techcraft_integrated:triple_compressed_cobblestone",
+    "techcraft_integrated:quadruple_compressed_cobblestone",
+    "techcraft_integrated:quintuple_compressed_cobblestone",
+    "techcraft_integrated:sextuple_compressed_cobblestone",
+    "techcraft_integrated:septuple_compressed_cobblestone",
+    "techcraft_integrated:octuple_compressed_cobblestone",
+
+    "techcraft_integrated:compressed_deepslate",
+    "techcraft_integrated:double_compressed_deepslate",
+    "techcraft_integrated:triple_compressed_deepslate",
+    "techcraft_integrated:quadruple_compressed_deepslate",
+    "techcraft_integrated:quintuple_compressed_deepslate",
+    "techcraft_integrated:sextuple_compressed_deepslate",
+    "techcraft_integrated:septuple_compressed_deepslate",
+    "techcraft_integrated:octuple_compressed_deepslate"
+  ]
+}
