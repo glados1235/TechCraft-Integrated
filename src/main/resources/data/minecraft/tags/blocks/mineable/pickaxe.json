@@ -17,6 +17,15 @@
     "techcraft_integrated:quintuple_compressed_deepslate",
     "techcraft_integrated:sextuple_compressed_deepslate",
     "techcraft_integrated:septuple_compressed_deepslate",
-    "techcraft_integrated:octuple_compressed_deepslate"
+    "techcraft_integrated:octuple_compressed_deepslate",
+
+    "techcraft_integrated:compressed_andesite",
+    "techcraft_integrated:double_compressed_andesite",
+    "techcraft_integrated:triple_compressed_andesite",
+    "techcraft_integrated:quadruple_compressed_andesite",
+    "techcraft_integrated:quintuple_compressed_andesite",
+    "techcraft_integrated:sextuple_compressed_andesite",
+    "techcraft_integrated:septuple_compressed_andesite",
+    "techcraft_integrated:octuple_compressed_andesite"
   ]
 }

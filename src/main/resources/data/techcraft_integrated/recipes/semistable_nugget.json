@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "QDQ",
+    "DOD",
+    "QDQ"
+  ],
+  "key": {
+    "O": {
+      "item": "techcraft_integrated:octuple_compressed_cobblestone"
+    },
+    "Q": {
+      "item": "techcraft_integrated:quadruple_compressed_cobblestone"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "techcraft_integrated:semistable_nugget",
+    "count": 8
+  }
+}

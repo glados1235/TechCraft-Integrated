@@ -4,6 +4,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -73,9 +74,56 @@ public class ModBlocks {
     public static final RegistryObject<Block> OCTUPLE_COMPRESSED_DEEPSLATE = registerBlock("octuple_compressed_deepslate",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.4f)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
 
-    //Dompressed Dirts
+    //Compressed Dirts
     public static final RegistryObject<Block> COMPRESSED_DIRT = registerBlock("compressed_dirt",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.4f)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.5f).sound(SoundType.GRAVEL)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> DOUBLE_COMPRESSED_DIRT = registerBlock("double_compressed_dirt",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.6f).sound(SoundType.GRAVEL)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> TRIPLE_COMPRESSED_DIRT = registerBlock("triple_compressed_dirt",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.7f).sound(SoundType.GRAVEL)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> QUADRUPLE_COMPRESSED_DIRT = registerBlock("quadruple_compressed_dirt",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.8f).sound(SoundType.GRAVEL)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> QUINTUPLE_COMPRESSED_DIRT = registerBlock("quintuple_compressed_dirt",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.9f).sound(SoundType.GRAVEL)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> SEXTUPLE_COMPRESSED_DIRT = registerBlock("sextuple_compressed_dirt",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(1f).sound(SoundType.GRAVEL)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> SEPTUPLE_COMPRESSED_DIRT = registerBlock("septuple_compressed_dirt",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(1.1f).sound(SoundType.GRAVEL)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> OCTUPLE_COMPRESSED_DIRT = registerBlock("octuple_compressed_dirt",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(1.2f).sound(SoundType.GRAVEL)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    //Compressed Andesite
+    public static final RegistryObject<Block> COMPRESSED_ANDESITE = registerBlock("compressed_andesite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5f).sound(SoundType.STONE)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> DOUBLE_COMPRESSED_ANDESITE = registerBlock("double_compressed_andesite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.6f).sound(SoundType.STONE)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> TRIPLE_COMPRESSED_ANDESITE = registerBlock("triple_compressed_andesite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.7f).sound(SoundType.STONE)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> QUADRUPLE_COMPRESSED_ANDESITE = registerBlock("quadruple_compressed_andesite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.8f).sound(SoundType.STONE)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> QUINTUPLE_COMPRESSED_ANDESITE = registerBlock("quintuple_compressed_andesite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.9f).sound(SoundType.STONE)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> SEXTUPLE_COMPRESSED_ANDESITE = registerBlock("sextuple_compressed_andesite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2f).sound(SoundType.STONE)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> SEPTUPLE_COMPRESSED_ANDESITE = registerBlock("septuple_compressed_andesite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.1f).sound(SoundType.STONE)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
+    public static final RegistryObject<Block> OCTUPLE_COMPRESSED_ANDESITE = registerBlock("octuple_compressed_andesite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2.1f).sound(SoundType.STONE)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
+
 
     private static  <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

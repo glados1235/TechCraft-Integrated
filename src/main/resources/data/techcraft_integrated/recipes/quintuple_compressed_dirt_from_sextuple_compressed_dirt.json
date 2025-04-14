@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "techcraft_integrated:sextuple_compressed_dirt"
+    }
+  ],
+  "result": {
+    "item": "techcraft_integrated:quintuple_compressed_dirt",
+    "count": 9
+  }
+}

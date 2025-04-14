@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "techcraft_integrated:quintuple_compressed_andesite"
+    }
+  },
+  "result": {
+    "item": "techcraft_integrated:sextuple_compressed_andesite"
+  }
+}

@@ -12,6 +12,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> DICK_STICK = ITEMS.register("dick_stick", () -> new Item(new Item.Properties().tab(ModCreativemodeTab.TECHCRAFT_INTEGRATED).stacksTo(1)));
 
+    public static final RegistryObject<Item> SEMISTABLE_NUGGET = ITEMS.register("semistable_nugget", () -> new Item(new Item.Properties().tab(ModCreativemodeTab.TECHCRAFT_INTEGRATED).stacksTo(64)));
+
+    public static final RegistryObject<Item> UNSTABLE_INGOT = ITEMS.register("unstable_ingot", () -> new Item(new Item.Properties().tab(ModCreativemodeTab.TECHCRAFT_INTEGRATED).stacksTo(64)));
+
     public static void Register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

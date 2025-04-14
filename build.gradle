@@ -82,7 +82,7 @@ repositories {
 dependencies {
 
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    compileOnly fg.deobf("curse.maven:cyclic-239286:5897426")
+    // compileOnly fg.deobf("curse.maven:cyclic-239286:5897426")
 
 }
 

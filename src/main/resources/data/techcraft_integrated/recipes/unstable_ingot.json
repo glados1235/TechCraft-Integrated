@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "D#D",
+    "#N#",
+    "D#D"
+  ],
+  "key": {
+    "#": {
+      "item": "techcraft_integrated:semistable_nugget"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "item": "techcraft_integrated:unstable_ingot",
+    "count": 1
+  }
+}

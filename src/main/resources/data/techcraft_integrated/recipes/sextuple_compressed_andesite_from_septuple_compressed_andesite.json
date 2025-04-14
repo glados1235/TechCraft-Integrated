@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "techcraft_integrated:septuple_compressed_andesite"
+    }
+  ],
+  "result": {
+    "item": "techcraft_integrated:sextuple_compressed_andesite",
+    "count": 9
+  }
+}
