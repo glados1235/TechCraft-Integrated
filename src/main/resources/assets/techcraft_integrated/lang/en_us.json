@@ -1,9 +1,12 @@
 {
+
+  "itemGroup.techcrafttab":"Techcraft Integrated",
   "item.techcraft_integrated.dick_stick": "Dick Stick",
   "item.techcraft_integrated.unstable_ingot": "Unstable Ingot",
   "item.techcraft_integrated.semistable_nugget": "Semi-stable Nugget",
 
   "block.techcraft_integrated.dick_block": "Dick Block",
+  "block.techcraft_integrated.power_converter": "Power Converter",
 
 
   "block.techcraft_integrated.compressed_cobblestone": "Compressed Cobblestone",

@@ -3,6 +3,8 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
+
 }
 
 version = '0.0.1'
@@ -61,6 +63,7 @@ minecraft {
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
+
     }
 }
 
@@ -82,7 +85,8 @@ repositories {
 dependencies {
 
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    // compileOnly fg.deobf("curse.maven:cyclic-239286:5897426")
+    implementation fg.deobf("curse.maven:ic2-classic-242942:6275736")
+
 
 }
 

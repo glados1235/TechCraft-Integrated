@@ -24,6 +24,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> DICK_BLOCK = registerBlock("dick_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST).noCollission().strength(0.6f)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
 
+    public static final RegistryObject<Block> POWER_CONVERTER = registerBlock(
+            "power_converter",
+            () -> new PowerConverterBlock(),
+            ModCreativemodeTab.TECHCRAFT_INTEGRATED
+    );
+
+
+
+
+
+
+
+
+
+
+
     public static final RegistryObject<Block> COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5f)), ModCreativemodeTab.TECHCRAFT_INTEGRATED);
 

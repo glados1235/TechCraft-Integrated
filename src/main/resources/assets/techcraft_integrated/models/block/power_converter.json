@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "techcraft_integrated:block/power_converter_panel",
+    "up": "techcraft_integrated:block/power_converter_panel",
+    "north": "techcraft_integrated:block/power_converter_fe_out",
+    "south": "techcraft_integrated:block/power_converter_eu_in",
+    "west": "techcraft_integrated:block/power_converter_panel",
+    "east": "techcraft_integrated:block/power_converter_panel",
+    "particle": "techcraft_integrated:block/power_converter_panel"
+  }
+}

@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tombvali.techcraft_integrated.block.ModBlocks;
+import net.tombvali.techcraft_integrated.init.ModBlockEntities;
 import net.tombvali.techcraft_integrated.item.ModItems;
 import org.slf4j.Logger;
 
@@ -27,7 +28,7 @@ public class TechCraftIntegrated
 
         ModItems.Register(modEventBus);
         ModBlocks.Register(modEventBus);
-
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
