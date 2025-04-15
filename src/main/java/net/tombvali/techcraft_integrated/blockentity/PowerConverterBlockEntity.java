@@ -29,7 +29,7 @@ public class PowerConverterBlockEntity extends BlockEntity implements IEnergySin
     private static final Logger LOGGER = LogManager.getLogger();
 
     private int internalEnergyBuffer = 0;
-    private final int MAX_ENERGY = 10000; // or whatever fits your design
+    private final int MAX_ENERGY = 10000;
 
 
     @Override
@@ -60,7 +60,7 @@ public class PowerConverterBlockEntity extends BlockEntity implements IEnergySin
             new IEnergyStorage() {
                 @Override
                 public int receiveEnergy(int maxReceive, boolean simulate) {
-                    return 0; // This block only outputs FE, no input.
+                    return 0;
                 }
 
                 @Override
@@ -120,11 +120,11 @@ public class PowerConverterBlockEntity extends BlockEntity implements IEnergySin
                 final double EU_TO_RF_RATIO = 0.25; // 1 EU = 0.25 RF
 
                 int maxEUToSend = be.internalEnergyBuffer;
-                int rfToSend = (int)(maxEUToSend * EU_TO_RF_RATIO); // Max RF we can send
+                int rfToSend = (int)(maxEUToSend * EU_TO_RF_RATIO);
 
-                int rfAccepted = handler.receiveEnergy(rfToSend, false); // Try to push RF
+                int rfAccepted = handler.receiveEnergy(rfToSend, false);
 
-                int euUsed = (int)Math.ceil(rfAccepted / EU_TO_RF_RATIO); // Calculate how much EU that RF cost
+                int euUsed = (int)Math.ceil(rfAccepted / EU_TO_RF_RATIO);
 
                 if (euUsed > 0) {
                     be.internalEnergyBuffer -= euUsed;
