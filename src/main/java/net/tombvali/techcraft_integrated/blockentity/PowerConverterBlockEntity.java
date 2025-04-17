@@ -20,6 +20,8 @@ import net.minecraftforge.energy.IEnergyStorage;
 import net.tombvali.techcraft_integrated.init.ModBlockEntities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import static net.tombvali.techcraft_integrated.block.PowerConverterBlock.FACING;
+
 
 import java.util.EnumMap;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -52,7 +54,6 @@ public class PowerConverterBlockEntity extends BlockEntity implements IEnergySin
 
     public PowerConverterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.POWER_CONVERTER.get(), pos, state);
-        LOGGER.info("PowerConverterBlockEntity created at {}", pos);
 
     }
 
@@ -128,7 +129,6 @@ public class PowerConverterBlockEntity extends BlockEntity implements IEnergySin
 
                 if (euUsed > 0) {
                     be.internalEnergyBuffer -= euUsed;
-                    LOGGER.info("Sent {} RF ({} EU used), buffer now = {}", rfAccepted, euUsed, be.internalEnergyBuffer);
                 }
 
 
@@ -172,7 +172,6 @@ public class PowerConverterBlockEntity extends BlockEntity implements IEnergySin
 
         int leftover = amount - toAccept;
 
-        LOGGER.info("Accepted {} EU from direction {} ({} left over), buffer now {}", toAccept, direction, leftover, internalEnergyBuffer);
         return leftover;
     }
 
@@ -198,12 +197,13 @@ public class PowerConverterBlockEntity extends BlockEntity implements IEnergySin
     }
 
     public Direction getInputSide() {
-        return getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING).getOpposite();
+        return getBlockState().getValue(FACING).getOpposite();
     }
 
     public Direction getOutputSide() {
-        return getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING);
+        return getBlockState().getValue(FACING);
     }
+
 
 
 }

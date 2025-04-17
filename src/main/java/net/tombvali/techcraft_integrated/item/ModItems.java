@@ -14,7 +14,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> SEMISTABLE_NUGGET = ITEMS.register("semistable_nugget", () -> new Item(new Item.Properties().tab(ModCreativemodeTab.TECHCRAFT_INTEGRATED).stacksTo(64)));
 
-    public static final RegistryObject<Item> UNSTABLE_INGOT = ITEMS.register("unstable_ingot", () -> new Item(new Item.Properties().tab(ModCreativemodeTab.TECHCRAFT_INTEGRATED).stacksTo(64)));
+    public static final RegistryObject<UnstableIngotItem> UNSTABLE_INGOT = ITEMS.register("unstable_ingot", () -> new UnstableIngotItem(new Item.Properties().tab(ModCreativemodeTab.TECHCRAFT_INTEGRATED).stacksTo(64)));
 
     public static void Register(IEventBus eventBus) {
         ITEMS.register(eventBus);

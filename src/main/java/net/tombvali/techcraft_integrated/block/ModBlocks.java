@@ -29,14 +29,11 @@ public class ModBlocks {
             () -> new PowerConverterBlock(),
             ModCreativemodeTab.TECHCRAFT_INTEGRATED
     );
-
-
-
-
-
-
-
-
+    public static final RegistryObject<Block> PUMP_JACK = registerBlock(
+            "pump_jack",
+            () -> new PumpJackBlock(),
+            ModCreativemodeTab.TECHCRAFT_INTEGRATED
+    );
 
 
 

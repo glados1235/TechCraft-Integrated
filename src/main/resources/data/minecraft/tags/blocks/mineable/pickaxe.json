@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "techcraft_integrated:power_converter",
+    "techcraft_integrated:pump_jack",
+
+
+
+
     "techcraft_integrated:compressed_cobblestone",
     "techcraft_integrated:double_compressed_cobblestone",
     "techcraft_integrated:triple_compressed_cobblestone",

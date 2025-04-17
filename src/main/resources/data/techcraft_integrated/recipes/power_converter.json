@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AEA",
+    "OMO",
+    "CCC"
+  ],
+
+  "key": {
+    "E": {
+      "item": "ic2:energy_crystal"
+    },
+    "A": {
+      "item": "ic2:advanced_circuit"
+    },
+    "O": {
+      "item": "ic2:dust_obsidian"
+    },
+    "M": {
+      "item": "ic2:machine_block"
+    },
+    "C": {
+      "item": "ic2:gold_double_insulated_cable_item"
+    }
+  },
+  "result": {
+    "item": "techcraft_integrated:power_converter"
+  }
+}

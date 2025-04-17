@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "techcraft_integrated:block/pump_jack" },
+    "facing=east":  { "model": "techcraft_integrated:block/pump_jack", "y": 90 },
+    "facing=south": { "model": "techcraft_integrated:block/pump_jack", "y": 180 },
+    "facing=west":  { "model": "techcraft_integrated:block/pump_jack", "y": 270 },
+    "facing=up":    { "model": "techcraft_integrated:block/pump_jack", "x": -90 },
+    "facing=down":  { "model": "techcraft_integrated:block/pump_jack", "x": 90 }
+  }
+}

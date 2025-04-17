@@ -22,10 +22,11 @@ import org.jetbrains.annotations.Nullable;
 
 public class PowerConverterBlock extends Block implements EntityBlock {
 
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+
 
     public PowerConverterBlock() {
-        super(BlockBehaviour.Properties.of(Material.METAL).strength(3.5f));
+        super(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(5.5f));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
@@ -47,8 +48,9 @@ public class PowerConverterBlock extends Block implements EntityBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
     }
+
 
 
     @Override
