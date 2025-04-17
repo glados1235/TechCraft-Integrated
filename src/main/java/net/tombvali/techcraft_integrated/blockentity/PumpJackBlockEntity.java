@@ -29,6 +29,9 @@ import javax.annotation.Nullable;
 import java.util.*;
 
 public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
+
+    // Comments done by good ol GPT since i am lazy, even knowing i have removed most of them lol
+
     private static final Logger LOGGER = LogManager.getLogger();
 
     private final int pumpSpeed = 200;
@@ -112,7 +115,7 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
         BlockPos pumpBase = this.getBlockPos().below();
         BlockPos startPos = null;
 
-        // 1. Try to scan *upwards* from last pumped Y to catch missed sources.
+        // Try to scan *upwards* from last pumped Y to catch missed sources.
         int scanTopY = pumpBase.getY();
         int scanBottomY = lastPumpedY >= 0 ? lastPumpedY + 1 : scanTopY - 5; // Scan a few layers up if never pumped yet
         scanBottomY = Math.max(scanBottomY, level.getMinBuildHeight());
@@ -131,7 +134,7 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
             }
         }
 
-        // 2. If none found above, fall back to original "first fluid below" logic
+        // If none found above, fall back to original "first fluid below" logic
         if (startPos == null) {
             BlockPos fallback = pumpBase;
             while (fallback.getY() >= level.getMinBuildHeight()) {
@@ -149,7 +152,7 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
 
 
 
-        // 2. Flood-fill to collect all connected fluid blocks.
+        // Flood-fill to collect all connected fluid blocks.
         // Limit the total number of blocks processed to avoid performance issues.
         final int MAX_BLOCKS = 1000;
         Set<BlockPos> visited = new HashSet<>();
@@ -164,7 +167,7 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
             FluidState currentFluid = level.getFluidState(current);
 
             if (currentFluid.isSource()) {
-                fluidBlocks.add(current); // Only store source blocks for pumping
+                fluidBlocks.add(current);
             }
 
             for (Direction direction : Direction.values()) {
@@ -172,7 +175,7 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
                 if (!visited.contains(neighbor)) {
                     FluidState neighborFluid = level.getFluidState(neighbor);
                     if (!neighborFluid.isEmpty()) {
-                        queue.add(neighbor); // Traverse through all fluid blocks
+                        queue.add(neighbor);
                         visited.add(neighbor);
                     }
                 }
@@ -180,7 +183,7 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
         }
 
 
-        // 3. Identify the "edge" blocks.
+        // Identify the "edge" blocks.
         // An edge block is one that is adjacent (any direction) to a non-fluid block.
         List<BlockPos> edgeBlocks = new ArrayList<>();
         for (BlockPos pos : fluidBlocks) {
@@ -193,17 +196,17 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
             }
         }
 
-        // 4. Remove one fluid block from the pool.
+        // Remove one fluid block from the pool.
         // Choose from the edgeBlocks (e.g., remove the block farthest from the pump)
         if (!edgeBlocks.isEmpty()) {
             BlockPos pumpPos = this.getBlockPos();
 
             edgeBlocks.sort((a, b) -> {
-                int yCompare = Integer.compare(b.getY(), a.getY()); // Prefer higher blocks
+                int yCompare = Integer.compare(b.getY(), a.getY());
                 if (yCompare != 0) return yCompare;
                 double distA = a.distSqr(pumpPos);
                 double distB = b.distSqr(pumpPos);
-                return Double.compare(distB, distA); // Prefer farther ones
+                return Double.compare(distB, distA);
             });
 
             BlockPos removalPos = edgeBlocks.get(0);
@@ -256,7 +259,6 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
         fluidCap.invalidate();
     }
 
-    // Keep your container/menu methods as needed.
     @Override
     public Component getDisplayName() {
         return Component.literal("Fluid Pump");
@@ -265,14 +267,11 @@ public class PumpJackBlockEntity extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory playerInventory, Player playerEntity) {
-        // Return your container for the block if needed.
         return null;
     }
 
     @Override
     public AABB getRenderBoundingBox() {
-        // Adjust the value as needed.
-        // Here, we inflate the default bounding box downward by the length of the pipe (assuming pipe extends below the block).
         return new AABB(this.worldPosition).expandTowards(0, -20, 0);
     }
 }

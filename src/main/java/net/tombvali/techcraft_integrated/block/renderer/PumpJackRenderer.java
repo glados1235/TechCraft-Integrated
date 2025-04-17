@@ -21,8 +21,6 @@ public class PumpJackRenderer implements BlockEntityRenderer<PumpJackBlockEntity
 
     @Override
     public void render(PumpJackBlockEntity tile, float partialTick, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int packedOverlay) {
-        //if (!tile.isPumping()) return;
-
 
         Level level = tile.getLevel();
         if (level == null) return;
@@ -31,7 +29,6 @@ public class PumpJackRenderer implements BlockEntityRenderer<PumpJackBlockEntity
         int y = pos.getY() - 1;
         int pipeLength = 0;
 
-        // Find how far to extend the pipe
         while (y >= level.getMinBuildHeight()) {
             BlockPos checkPos = new BlockPos(pos.getX(), y, pos.getZ());
             BlockState state = level.getBlockState(checkPos);
@@ -46,7 +43,6 @@ public class PumpJackRenderer implements BlockEntityRenderer<PumpJackBlockEntity
 
         poseStack.pushPose();
 
-        // Translate to the center of the pump block
         poseStack.translate(0.5, 0, 0.5);
 
         ResourceLocation PIPE_TEXTURE = new ResourceLocation("techcraft_integrated", "textures/block/pipe_texture.png");
